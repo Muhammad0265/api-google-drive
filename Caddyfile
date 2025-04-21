@@ -1,0 +1,17 @@
+:80 {
+    root * /srv/app/public
+
+    handle_path /api/* {
+        reverse_proxy symfony:8000
+    }
+
+    handle_path /media/* {
+        root * /srv/app/public
+        file_server
+    }
+
+    handle {
+        try_files {path} /index.html
+        file_server
+    }
+}
