@@ -15,6 +15,8 @@ use ApiPlatform\OpenApi\Model\Operation;
 use App\Component\User\Dtos\RefreshTokenRequestDto;
 use App\Component\User\Dtos\TokensDto;
 use App\Controller\DeleteAction;
+use App\Controller\OAuthControllerGithub;
+use App\Controller\OAuthControllerGitHubCheck;
 use App\Controller\UserAboutMeAction;
 use App\Controller\UserAuthAction;
 use App\Controller\UserAuthByRefreshTokenAction;
@@ -60,6 +62,15 @@ use Symfony\Component\Validator\Constraints as Assert;
         new Delete(
             controller: DeleteAction::class,
 //            security: "object == user || is_granted('ROLE_ADMIN')",
+        ),
+
+        new Post(
+            uriTemplate: '/login/github',
+            controller: OAuthControllerGithub::class,
+        ),
+        new Post(
+            uriTemplate: '/login/github/check',
+            controller: OAuthControllerGitHubCheck::class,
         ),
         new Post(
             uriTemplate: 'users/about_me',
