@@ -59,7 +59,7 @@ use Symfony\Component\Validator\Constraints as Assert;
         ),
         new Delete(
             controller: DeleteAction::class,
-            security: "object == user || is_granted('ROLE_ADMIN')",
+//            security: "object == user || is_granted('ROLE_ADMIN')",
         ),
         new Post(
             uriTemplate: 'users/about_me',

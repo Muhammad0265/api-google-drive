@@ -46,7 +46,6 @@ security:
             methods:
                 - get
                 - post
-                - delete
 
         user-media:
             pattern: ^/api/user/media$
