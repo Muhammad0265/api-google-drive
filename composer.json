@@ -12,7 +12,7 @@
         "doctrine/doctrine-bundle": "2.8.*",
         "doctrine/doctrine-migrations-bundle": "3.2.*",
         "doctrine/orm": "2.14.*",
-        "knpuniversity/oauth2-client-bundle": "^2.18",
+        "knpuniversity/oauth2-client-bundle": "*",
         "league/oauth2-github": "^3.1",
         "lexik/jwt-authentication-bundle": "2.18.*",
         "nelmio/cors-bundle": "2.2.*",
